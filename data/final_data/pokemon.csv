@@ -1,0 +1,21 @@
+Name,Type,Species,Height,Weight,Abilities,Catch rate,Base Friendship,Base Exp.,Growth Rate,Gender,HP,Attack,Defense,Sp. Atk,Sp. Def,Speed
+Bulbasaur,Grass Poison,Seed Pokémon,0.7 m (2′04″),6.9 kg (15.2 lbs),1. OvergrowChlorophyll (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),64,Medium Slow,"87.5% male, 12.5% female",45,49,49,65,65,45
+Ivysaur,Grass Poison,Seed Pokémon,1.0 m (3′03″),13.0 kg (28.7 lbs),1. OvergrowChlorophyll (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),142,Medium Slow,"87.5% male, 12.5% female",60,62,63,80,80,60
+Venusaur,Grass Poison,Seed Pokémon,2.4 m (7′10″),155.5 kg (342.8 lbs),Thick Fat,"45 (5.9% with PokéBall, full HP)",50 (normal),281,Medium Slow,"87.5% male, 12.5% female",80,100,123,122,120,80
+Charmander,Fire,Lizard Pokémon,0.6 m (2′00″),8.5 kg (18.7 lbs),1. BlazeSolar Power (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),62,Medium Slow,"87.5% male, 12.5% female",39,52,43,60,50,65
+Charmeleon,Fire,Flame Pokémon,1.1 m (3′07″),19.0 kg (41.9 lbs),1. BlazeSolar Power (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),142,Medium Slow,"87.5% male, 12.5% female",58,64,58,80,65,80
+Charizard,Fire Flying,Flame Pokémon,1.7 m (5′07″),100.5 kg (221.6 lbs),Drought,"45 (5.9% with PokéBall, full HP)",50 (normal),285,Medium Slow,"87.5% male, 12.5% female",78,104,78,159,115,100
+Squirtle,Water,Tiny Turtle Pokémon,0.5 m (1′08″),9.0 kg (19.8 lbs),1. TorrentRain Dish (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),63,Medium Slow,"87.5% male, 12.5% female",44,48,65,50,64,43
+Wartortle,Water,Turtle Pokémon,1.0 m (3′03″),22.5 kg (49.6 lbs),1. TorrentRain Dish (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),142,Medium Slow,"87.5% male, 12.5% female",59,63,80,65,80,58
+Blastoise,Water,Shellfish Pokémon,1.6 m (5′03″),101.1 kg (222.9 lbs),Mega Launcher,"45 (5.9% with PokéBall, full HP)",50 (normal),284,Medium Slow,"87.5% male, 12.5% female",79,103,120,135,115,78
+Caterpie,Bug,Worm Pokémon,0.3 m (1′00″),2.9 kg (6.4 lbs),1. Shield DustRun Away (hidden ability),"255 (33.3% with PokéBall, full HP)",50 (normal),39,Medium Fast,"50% male, 50% female",45,30,35,20,20,45
+Metapod,Bug,Cocoon Pokémon,0.7 m (2′04″),9.9 kg (21.8 lbs),1. Shed Skin,"120 (15.7% with PokéBall, full HP)",50 (normal),72,Medium Fast,"50% male, 50% female",50,20,55,25,25,30
+Butterfree,Bug Flying,Butterfly Pokémon,1.1 m (3′07″),32.0 kg (70.5 lbs),1. Compound EyesTinted Lens (hidden ability),"45 (5.9% with PokéBall, full HP)",50 (normal),178,Medium Fast,"50% male, 50% female",60,45,50,90,80,70
+Weedle,Bug Poison,Hairy Bug Pokémon,0.3 m (1′00″),3.2 kg (7.1 lbs),1. Shield DustRun Away (hidden ability),"255 (33.3% with PokéBall, full HP)",50 (normal),39,Medium Fast,"50% male, 50% female",40,35,30,20,20,50
+Kakuna,Bug Poison,Cocoon Pokémon,0.6 m (2′00″),10.0 kg (22.0 lbs),1. Shed Skin,"120 (15.7% with PokéBall, full HP)",50 (normal),72,Medium Fast,"50% male, 50% female",45,25,50,25,25,35
+Beedrill,Bug Poison,Poison Bee Pokémon,1.4 m (4′07″),40.5 kg (89.3 lbs),Adaptability,"45 (5.9% with PokéBall, full HP)",50 (normal),223,Medium Fast,"50% male, 50% female",65,150,40,15,80,145
+Pidgey,Normal Flying,Tiny Bird Pokémon,0.3 m (1′00″),1.8 kg (4.0 lbs),1. Keen Eye2. Tangled FeetBig Pecks (hidden ability),"255 (33.3% with PokéBall, full HP)",50 (normal),50,Medium Slow,"50% male, 50% female",40,45,40,35,35,56
+Pidgeotto,Normal Flying,Bird Pokémon,1.1 m (3′07″),30.0 kg (66.1 lbs),1. Keen Eye2. Tangled FeetBig Pecks (hidden ability),"120 (15.7% with PokéBall, full HP)",50 (normal),122,Medium Slow,"50% male, 50% female",63,60,55,50,50,71
+Pidgeot,Normal Flying,Bird Pokémon,2.2 m (7′03″),50.5 kg (111.3 lbs),No Guard,"45 (5.9% with PokéBall, full HP)",50 (normal),261,Medium Slow,"50% male, 50% female",83,80,80,135,80,121
+Rattata,Dark Normal,Mouse Pokémon,0.3 m (1′00″),3.8 kg (8.4 lbs),Gluttony Hustle Thick Fat,"255 (33.3% with PokéBall, full HP)",50 (normal),51,Medium Fast,"50% male, 50% female",30,56,35,25,35,72
+Raticate,Dark Normal,Mouse Pokémon,0.7 m (2′04″),25.5 kg (56.2 lbs),Gluttony Hustle Thick Fat,"127 (16.6% with PokéBall, full HP)",50 (normal),145,Medium Fast,"50% male, 50% female",75,71,70,40,80,77
