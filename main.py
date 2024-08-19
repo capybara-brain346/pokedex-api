@@ -1,13 +1,29 @@
-from fastapi import FastAPI, Depends
+"""
+Main API Module
+"""
+
 import sqlite3
-from models import Query, ResponseModel
 from typing import List
+from fastapi import FastAPI, Depends
+from models import Query, ResponseModel
 
 app = FastAPI(debug=True)
 q = Query()
 
 
 def get_db():
+    """
+    Opens a connection to the SQLite database and yields it for use.
+
+    The connection is automatically closed after use, ensuring proper resource management.
+
+    Yields:
+        sqlite3.Connection: An open connection to the SQLite database.
+
+    Closes:
+        The database connection is closed after the operation is complete.
+    """
+
     db = sqlite3.connect("pokemon.db")
     try:
         yield db
@@ -16,6 +32,18 @@ def get_db():
 
 
 def format_response(response: List[any]) -> List[ResponseModel]:
+    """
+    Transforms a raw database response into a list of ResponseModel instances.
+
+    Args:
+        response (List[any]): A list of tuples,
+        each representing a row from the database query result.
+
+    Returns:
+        List[ResponseModel]: A list of ResponseModel instances
+        where each instance corresponds to a row in the database.
+    """
+
     return [
         ResponseModel(
             name=row[0],
@@ -44,6 +72,20 @@ def format_response(response: List[any]) -> List[ResponseModel]:
 def get_pokemons_by_name(
     name: str, db: sqlite3.Connection = Depends(get_db)
 ) -> List[ResponseModel]:
+    """
+    Retrieves a list of Pokémon from the database
+    that match the specified name.
+
+    Args:
+        name (str): The name of the Pokémon to search for.
+        db (sqlite3.Connection, optional): The database connection,
+        provided by dependency injection.
+
+    Returns:
+        List[ResponseModel]: A list of ResponseModel instances
+        representing the Pokémon that match the specified name.
+    """
+
     cursor = db.cursor()
     cursor.execute(q.name_query, (name,))
     response = cursor.fetchall()
@@ -52,10 +94,25 @@ def get_pokemons_by_name(
     return response_clean
 
 
-@app.post("/pokemons/abilities/{abilities}")
+@app.get("/pokemons/abilities/{abilities}")
 def get_pokemons_by_abilities(
     abilities: str, db: sqlite3.Connection = Depends(get_db)
 ) -> List[ResponseModel]:
+    """
+    Retrieves a list of Pokémon from the database
+    that have the specified abilities.
+
+    Args:
+        abilities (str): A substring of abilities
+        to search for in the database.
+        db (sqlite3.Connection, optional): The database connection,
+        provided by dependency injection.
+
+    Returns:
+        List[ResponseModel]: A list of ResponseModel instances representing the
+        Pokémon that have abilities matching the specified substring.
+    """
+
     cursor = db.cursor()
     abilities_binding = f"%{abilities}%"
     cursor.execute(q.ability_query, [abilities_binding])
@@ -65,12 +122,27 @@ def get_pokemons_by_abilities(
     return response_clean
 
 
-@app.post("/pokemons/type/{type}")
+@app.get("/pokemons/type/{pokemon_type}")
 def get_pokemons_by_type(
-    type: str, db: sqlite3.Connection = Depends(get_db)
+    pokemon_type: str, db: sqlite3.Connection = Depends(get_db)
 ) -> List[ResponseModel]:
+    """
+    Retrieves a list of Pokémon from the database
+    that match the specified type.
+
+    Args:
+        pokemon_type (str): A substring of the type to
+        search for in the database.
+        db (sqlite3.Connection, optional): The database connection,
+        provided by dependency injection.
+
+    Returns:
+        List[ResponseModel]: A list of ResponseModel instances
+        representing the Pokémon that match the specified type.
+    """
+
     cursor = db.cursor()
-    type_binding = f"%{type}%"
+    type_binding = f"%{pokemon_type}%"
     cursor.execute(q.type_query, [type_binding])
     response = cursor.fetchall()
     response_clean = format_response(response=response)
@@ -78,19 +150,46 @@ def get_pokemons_by_type(
     return response_clean
 
 
-@app.post("/pokemons/size")
+@app.get("/pokemons/size")
 def get_pokemons_by_size(
     parameter: str,
     height: str | None = None,
     weight: str | None = None,
     db: sqlite3.Connection = Depends(get_db),
-) -> List[ResponseModel]:
+) -> List[ResponseModel] | str:
+    """
+    Retrieves a list of Pokémon from the database
+    based on size parameters such as height or weight.
+
+    Args:
+        parameter (str): A parameter to specify the
+        size criteria ('h' for height, 'w' for weight, 'wh' for both).
+
+        height (str, optional): A string specifying the
+        height and comparison operator (e.g., '>1.2').
+
+        weight (str, optional): A string specifying the
+        weight and comparison operator (e.g., '<10.0').
+
+        db (sqlite3.Connection, optional): The database connection,
+        provided by dependency injection.
+
+    Returns:
+        List[ResponseModel] | str:
+            - A list of ResponseModel instances representing Pokémon
+            that match the specified size criteria if valid.
+            - A string "Invalid Parameter" if the provided
+            parameter is not recognized.
+    """
+
     cursor = db.cursor()
 
     print(height[0], height[1:])
     if parameter == "h":
         column = "height"
         operator = height[0]
+        response_clean = ResponseModel()
+
         cursor.execute(
             q.size_query.format(column=column, operator=operator),
             [float(height[1:])],
@@ -115,4 +214,6 @@ def get_pokemons_by_size(
         )
         response = cursor.fetchall()
         response_clean = format_response(response=response[1:])
+    else:
+        return "Invalid Paramter"
     return response_clean
