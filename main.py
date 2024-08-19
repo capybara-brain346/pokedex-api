@@ -195,7 +195,7 @@ def get_pokemons_by_size(
             [float(height[1:])],
         )
         response = cursor.fetchall()
-        response_clean = format_response(response=response[1:])
+        response_clean = format_response(response=response)
     elif parameter == "w":
         column = "weight"
         operator = weight[0]
@@ -204,7 +204,7 @@ def get_pokemons_by_size(
             [float(weight[1:])],
         )
         response = cursor.fetchall()
-        response_clean = format_response(response=response[1:])
+        response_clean = format_response(response=response)
     elif parameter == "wh":
         operator_h = height[0]
         operator_w = weight[0]
