@@ -80,20 +80,21 @@ class ResponseModel(BaseModel):
         which can be an integer or "NULL" as a string. Default is "NULL".
     """
 
-    name: str = ""
-    type: str = ""
-    species: str = ""
-    height: float = -1.0
-    weight: float = -1.0
-    abilities: str = ""
-    catch_rate: int = -1
-    base_friendship: int = -1
-    base_exp: int = -1
-    growth_rate: str = ""
-    gender: str = ""
-    hp: int = -1
-    attack: int = -1
-    defense: int = -1
-    sp_attack: int = -1
-    sp_defense: int = -1
-    speed: int = -1
+    # TODO improve validation
+    name: str = "NULL"
+    type: str = "NULL"
+    species: str = "NULL"
+    height: float | str = "NULL"
+    weight: float | str = "NULL"
+    abilities: str = "NULL"
+    catch_rate: int | str = "NULL"
+    base_friendship: int | str = "NULL"
+    base_exp: int | str = "NULL"
+    growth_rate: str | str = "NULL"
+    gender: str = "NULL"
+    hp: int | str = "NULL"
+    attack: int | str = "NULL"
+    defense: int | str = "NULL"
+    sp_attack: int | str = "NULL"
+    sp_defense: int | str = "NULL"
+    speed: int | str = "NULL"
