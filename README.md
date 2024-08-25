@@ -1,9 +1,9 @@
-<h1 align="center" id="title">pokedex-api</h1>
+<h1 align="center" id="title">pokedex-api 🚀</h1>
 
 
 ![210226041654-05-pokemon-anniversary-design](https://github.com/user-attachments/assets/70fdfd48-bd6d-49c5-9bdc-6c5b5aed4860)
 
-<p id="description">pokedex-api is a Restful api to retrieve pokemon data.</p>
+<h3 id="description">pokedex-api is a Restful api to retrieve pokemon data.</h3>
 
 
   
