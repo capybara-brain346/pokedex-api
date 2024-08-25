@@ -23,7 +23,7 @@ Spearow,Normal Flying,Tiny Bird Pokémon,0.3,2,1. Keen EyeSniper (hidden ability
 Fearow,Normal Flying,Beak Pokémon,1.2,38,1. Keen EyeSniper (hidden ability),90,50,155,Medium Fast,"50% male, 50% female",65,90,65,61,61,100
 Ekans,Poison,Snake Pokémon,2,6.9,1. Intimidate2. Shed SkinUnnerve (hidden ability),255,50,58,Medium Fast,"50% male, 50% female",35,60,44,40,54,55
 Arbok,Poison,Cobra Pokémon,3.5,65,1. Intimidate2. Shed SkinUnnerve (hidden ability),90,50,157,Medium Fast,"50% male, 50% female",60,95,69,65,79,80
-Pikachu,Electric,Mouse Pokémon,0.4,6,,190,50,112,Medium Fast,"50% male, 50% female",45,80,50,75,60,120
+Pikachu,Electric,Mouse Pokémon,0.4,6,Static,190,50,112,Medium Fast,"50% male, 50% female",45,80,50,75,60,120
 Raichu,Electric Psychic,Mouse Pokémon,0.7,21,Surge Surfer,75,50,243,Medium Fast,"50% male, 50% female",60,85,50,95,85,110
 Sandshrew,Ice Steel,Mouse Pokémon,0.7,40,Snow Cloak Slush Rush,255,50,60,Medium Fast,"50% male, 50% female",50,75,90,10,35,40
 Sandslash,Ice Steel,Mouse Pokémon,1.2,55,Snow Cloak Slush Rush,90,50,158,Medium Fast,"50% male, 50% female",75,100,120,25,65,65
@@ -125,7 +125,7 @@ Magikarp,Water,Fish Pokémon,0.9,10,1. Swift SwimRattled (hidden ability),255,50
 Gyarados,Water Dark,Atrocious Pokémon,6.5,305,Mold Breaker,45,50,224,Slow,"50% male, 50% female",95,155,109,70,130,81
 Lapras,Water Ice,Transport Pokémon,2.5,220,1. Water Absorb2. Shell ArmorHydration (hidden ability),45,50,187,Slow,"50% male, 50% female",130,85,80,85,95,60
 Ditto,Normal,Transform Pokémon,0.3,4,1. LimberImposter (hidden ability),35,50,101,Medium Fast,Genderless,48,48,48,48,48,48
-Eevee,Normal,Evolution Pokémon,0.3,6.5,,45,50,65,Medium Fast,"87.5% male, 12.5% female",65,75,70,65,85,75
+Eevee,Normal,Evolution Pokémon,0.3,6.5,Run Away Adaptability,45,50,65,Medium Fast,"87.5% male, 12.5% female",65,75,70,65,85,75
 Vaporeon,Water,Bubble Jet Pokémon,1,29,1. Water AbsorbHydration (hidden ability),45,50,184,Medium Fast,"87.5% male, 12.5% female",130,65,60,110,95,65
 Jolteon,Electric,Lightning Pokémon,0.8,24.5,1. Volt AbsorbQuick Feet (hidden ability),45,50,184,Medium Fast,"87.5% male, 12.5% female",65,65,60,110,95,130
 Flareon,Fire,Flame Pokémon,0.9,25,1. Flash FireGuts (hidden ability),45,50,184,Medium Fast,"87.5% male, 12.5% female",65,130,60,95,110,65
@@ -877,7 +877,7 @@ Drakloak,Dragon Ghost,Caretaker Pokémon,1.4,11,1. Clear Body2. InfiltratorCurse
 Dragapult,Dragon Ghost,Stealth Pokémon,3,50,1. Clear Body2. InfiltratorCursed Body (hidden ability),45,50,300,Slow,"50% male, 50% female",88,120,75,100,75,142
 Zacian,Fairy Steel,Warrior Pokémon,2.8,355,Intrepid Sword,10,0,350,Slow,Genderless,92,150,115,80,115,148
 Zamazenta,Fighting Steel,Warrior Pokémon,2.9,785,Dauntless Shield,10,0,350,Slow,Genderless,92,120,140,80,140,128
-Eternatus,Poison Dragon,Gigantic Pokémon,100,,,,0,563,Slow,—,255,115,250,125,250,130
+Eternatus,Poison Dragon,Gigantic Pokémon,100,950,Pressure,255,0,563,Slow,Genderless,255,115,250,125,250,130
 Kubfu,Fighting,Wushu Pokémon,0.6,12,1. Inner Focus,3,50,77,Slow,"87.5% male, 12.5% female",60,90,60,53,50,72
 Urshifu,Fighting Water,Wushu Pokémon,1.9,105,Unseen Fist,3,50,275,Slow,"87.5% male, 12.5% female",100,130,100,63,60,97
 Zarude,Dark Grass,Rogue Monkey Pokémon,1.8,70,1. Leaf Guard,3,0,300,Slow,Genderless,105,120,105,70,95,105
@@ -888,7 +888,7 @@ Spectrier,Ghost,Swift Horse Pokémon,2,44.5,1. Grim Neigh,3,35,290,Slow,Genderle
 Calyrex,Psychic Ghost,High King Pokémon,2.4,53.6,As One,3,100,340,Slow,Genderless,100,85,80,165,100,150
 Wyrdeer,Normal Psychic,Big Horn Pokémon,1.8,95.1,1. Intimidate2. FriskSap Sipper (hidden ability),45,50,263,Slow,"50% male, 50% female",103,105,72,105,75,65
 Kleavor,Bug Rock,Axe Pokémon,1.8,89,1. Swarm2. Sheer ForceSharpness (hidden ability),15,50,175,Medium Fast,"50% male, 50% female",70,135,95,45,70,85
-Ursaluna,Ground Normal,Peat Pokémon,2.7,333,Mind's Eye,5,,—,Medium Fast,"100% male, 0% female",113,70,120,135,65,52
+Ursaluna,Ground Normal,Peat Pokémon,2.7,333,Mind's Eye,5,50,275,Medium Fast,"100% male, 0% female",113,70,120,135,65,52
 Basculegion,Water Ghost,Big Fish Pokémon,3,110,Swift Swim Adaptability Mold Breaker,45,50,265,Medium Fast,"0% male, 100% female",120,92,65,100,75,78
 Sneasler,Fighting Poison,Free Climb Pokémon,1.3,43,1. Pressure2. UnburdenPoison Touch (hidden ability),20,50,102,Medium Slow,"50% male, 50% female",80,130,60,40,80,120
 Overqwil,Dark Poison,Pin Cluster Pokémon,2.5,60.5,1. Poison Point2. Swift SwimIntimidate (hidden ability),45,50,179,Medium Fast,"50% male, 50% female",85,115,95,65,65,85
@@ -965,7 +965,7 @@ Cetoddle,Ice,Terra Whale Pokémon,1.2,45,1. Thick Fat2. Snow CloakSheer Force (h
 Cetitan,Ice,Terra Whale Pokémon,4.5,700,1. Thick Fat2. Slush RushSheer Force (hidden ability),50,50,182,Medium Slow,"50% male, 50% female",170,113,65,45,55,73
 Veluza,Water Psychic,Jettison Pokémon,2.5,90,1. Mold BreakerSharpness (hidden ability),100,50,167,Fast,"50% male, 50% female",90,102,73,78,65,70
 Dondozo,Water,Big Catfish Pokémon,12,220,1. Unaware2. ObliviousWater Veil (hidden ability),25,50,265,Slow,"50% male, 50% female",150,100,115,65,65,35
-Tatsugiri,Dragon Water,Mimicry Pokémon,0.3,8,,100,50,166,Medium Slow,"50% male, 50% female",68,50,60,120,95,82
+Tatsugiri,Dragon Water,Mimicry Pokémon,0.3,8,Commander,100,50,166,Medium Slow,"50% male, 50% female",68,50,60,120,95,82
 Annihilape,Fighting Ghost,Rage Monkey Pokémon,1.2,56,1. Vital Spirit2. Inner FocusDefiant (hidden ability),45,50,268,Medium Fast,"50% male, 50% female",110,115,80,50,90,90
 Clodsire,Poison Ground,Spiny Fish Pokémon,1.8,223,1. Poison Point2. Water AbsorbUnaware (hidden ability),90,50,151,Medium Fast,"50% male, 50% female",130,75,60,45,100,20
 Farigiraf,Normal Psychic,Long Neck Pokémon,3.2,160,1. Cud Chew2. Armor TailSap Sipper (hidden ability),45,50,260,Medium Fast,"50% male, 50% female",120,90,70,110,70,60
@@ -996,20 +996,20 @@ Roaring Moon,Dragon Dark,Paradox Pokémon,2,380,1. Protosynthesis,10,0,295,Slow,
 Iron Valiant,Fairy Fighting,Paradox Pokémon,1.4,35,1. Quark Drive,10,0,295,Slow,Genderless,74,130,90,120,60,116
 Koraidon,Fighting Dragon,Paradox Pokémon,2.5,303,1. Orichalcum Pulse,3,0,335,Slow,Genderless,100,135,115,85,100,135
 Miraidon,Electric Dragon,Paradox Pokémon,3.5,240,1. Hadron Engine,3,0,335,Slow,Genderless,100,85,100,135,115,135
-Walking Wake,Water Dragon,Paradox Pokémon,3.5,280,1. Protosynthesis,5,,—,Slow,Genderless,99,83,91,125,83,109
-Iron Leaves,Grass Psychic,Paradox Pokémon,1.5,125,1. Quark Drive,5,,—,Slow,Genderless,90,130,88,70,108,104
-Dipplin,Grass Dragon,Candy Apple Pokémon,0.4,4.4,1. Supersweet Syrup2. GluttonySticky Hold (hidden ability),45,,—,Erratic,"50% male, 50% female",80,80,110,95,80,40
-Poltchageist,Grass Ghost,Matcha Pokémon,0.1,1.1,1. HospitalityHeatproof (hidden ability),120,,—,Medium Fast,Genderless,40,45,45,74,54,50
-Sinistcha,Grass Ghost,Matcha Pokémon,0.2,2.2,1. HospitalityHeatproof (hidden ability),60,,—,Medium Fast,Genderless,71,60,106,121,80,70
-Okidogi,Poison Fighting,Retainer Pokémon,1.8,92,1. Toxic ChainGuard Dog (hidden ability),3,,—,Slow,"100% male, 0% female",88,128,115,58,86,80
-Munkidori,Poison Psychic,Retainer Pokémon,1,12.2,1. Toxic ChainFrisk (hidden ability),3,,—,Slow,"100% male, 0% female",88,75,66,130,90,106
-Fezandipiti,Poison Fairy,Retainer Pokémon,1.4,30.1,1. Toxic ChainTechnician (hidden ability),3,,—,Slow,"100% male, 0% female",88,91,82,70,125,99
-Ogerpon,Grass Rock,Mask Pokémon,1.2,39.8,Sturdy Embody Aspect,5,,—,Slow,"0% male, 100% female",80,120,84,60,96,110
-Archaludon,Steel Dragon,Alloy Pokémon,2,60,1. Stamina2. SturdyStalwart (hidden ability),10,,—,Medium Fast,"50% male, 50% female",90,105,130,125,65,85
-Hydrapple,Grass Dragon,—,1.8,93,1. Supersweet Syrup2. RegeneratorSticky Hold (hidden ability),10,,—,Erratic,"50% male, 50% female",106,80,110,120,80,44
-Gouging Fire,Fire Dragon,Paradox Pokémon,3.5,590,1. Protosynthesis,10,,—,Slow,Genderless,105,115,121,65,93,91
-Raging Bolt,Electric Dragon,Paradox Pokémon,5.2,480,1. Protosynthesis,10,,—,Slow,Genderless,125,73,91,137,89,75
-Iron Boulder,Rock Psychic,Paradox Pokémon,1.5,162.5,1. Quark Drive,10,,—,Slow,Genderless,90,120,80,68,108,124
-Iron Crown,Steel Psychic,Paradox Pokémon,1.6,156,1. Quark Drive,10,,—,Slow,Genderless,90,72,100,122,108,98
-Terapagos,Normal,Tera Pokémon,1.7,77,Teraform Zero,255,,—,Slow,"50% male, 50% female",160,105,110,130,110,85
-Pecharunt,Poison Ghost,Subjugation Pokémon,0.3,0.3,1. Poison Puppeteer,3,,—,Slow,Genderless,88,88,160,88,88,88
+Walking Wake,Water Dragon,Paradox Pokémon,3.5,280,1. Protosynthesis,5,0,0,Slow,Genderless,99,83,91,125,83,109
+Iron Leaves,Grass Psychic,Paradox Pokémon,1.5,125,1. Quark Drive,5,0,0,Slow,Genderless,90,130,88,70,108,104
+Dipplin,Grass Dragon,Candy Apple Pokémon,0.4,4.4,1. Supersweet Syrup2. GluttonySticky Hold (hidden ability),45,0,0,Erratic,"50% male, 50% female",80,80,110,95,80,40
+Poltchageist,Grass Ghost,Matcha Pokémon,0.1,1.1,1. HospitalityHeatproof (hidden ability),120,0,0,Medium Fast,Genderless,40,45,45,74,54,50
+Sinistcha,Grass Ghost,Matcha Pokémon,0.2,2.2,1. HospitalityHeatproof (hidden ability),60,0,0,Medium Fast,Genderless,71,60,106,121,80,70
+Okidogi,Poison Fighting,Retainer Pokémon,1.8,92,1. Toxic ChainGuard Dog (hidden ability),3,0,0,Slow,"100% male, 0% female",88,128,115,58,86,80
+Munkidori,Poison Psychic,Retainer Pokémon,1,12.2,1. Toxic ChainFrisk (hidden ability),3,0,0,Slow,"100% male, 0% female",88,75,66,130,90,106
+Fezandipiti,Poison Fairy,Retainer Pokémon,1.4,30.1,1. Toxic ChainTechnician (hidden ability),3,0,0,Slow,"100% male, 0% female",88,91,82,70,125,99
+Ogerpon,Grass Rock,Mask Pokémon,1.2,39.8,Sturdy Embody Aspect,5,0,0,Slow,"0% male, 100% female",80,120,84,60,96,110
+Archaludon,Steel Dragon,Alloy Pokémon,2,60,1. Stamina2. SturdyStalwart (hidden ability),10,0,0,Medium Fast,"50% male, 50% female",90,105,130,125,65,85
+Hydrapple,Grass Dragon,—,1.8,93,1. Supersweet Syrup2. RegeneratorSticky Hold (hidden ability),10,0,0,Erratic,"50% male, 50% female",106,80,110,120,80,44
+Gouging Fire,Fire Dragon,Paradox Pokémon,3.5,590,1. Protosynthesis,10,0,0,Slow,Genderless,105,115,121,65,93,91
+Raging Bolt,Electric Dragon,Paradox Pokémon,5.2,480,1. Protosynthesis,10,0,0,Slow,Genderless,125,73,91,137,89,75
+Iron Boulder,Rock Psychic,Paradox Pokémon,1.5,162.5,1. Quark Drive,10,0,0,Slow,Genderless,90,120,80,68,108,124
+Iron Crown,Steel Psychic,Paradox Pokémon,1.6,156,1. Quark Drive,10,0,0,Slow,Genderless,90,72,100,122,108,98
+Terapagos,Normal,Tera Pokémon,1.7,77,Teraform Zero,255,0,0,Slow,"50% male, 50% female",160,105,110,130,110,85
+Pecharunt,Poison Ghost,Subjugation Pokémon,0.3,0.3,1. Poison Puppeteer,3,0,0,Slow,Genderless,88,88,160,88,88,88
