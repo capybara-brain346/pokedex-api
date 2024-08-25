@@ -1,6 +1,7 @@
 <h1 align="center" id="title">pokedex-api</h1>
 
-<p align="center"><img src="https://socialify.git.ci/capybara-brain346/pokedex-api/image?description=1&amp;font=Raleway&amp;name=1&amp;owner=1&amp;pattern=Signal&amp;theme=Dark" alt="project-image"></p>
+
+![210226041654-05-pokemon-anniversary-design](https://github.com/user-attachments/assets/70fdfd48-bd6d-49c5-9bdc-6c5b5aed4860)
 
 <p id="description">pokedex-api is a Restful api to retrieve pokemon data.</p>
 
@@ -9,10 +10,13 @@
   
 <h2>🧐 Features</h2>
 
+![Screenshot 2024-08-25 152039](https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a)
 Here're some of the project's best features:
 
 *   Get pokemon by name ability and type
 *   Get pokemon by querying its height and weight
+*   Get pokemon by species, growth_rate, base friendship, base experience, catch_rate
+
 
 <h2>🛠️ Installation Steps:</h2>
 
