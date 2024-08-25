@@ -34,13 +34,20 @@ class Query(BaseModel):
         placeholders for height and weight comparison operators.
     """
 
-    name_query: str = "SELECT * FROM pokemons WHERE name=?"
-    type_query: str = "SELECT * FROM pokemons WHERE type like ?"
+    name_query: str = "SELECT * FROM POKEMONS WHERE name=?"
+    type_query: str = "SELECT * FROM POKEMONS WHERE type like ?"
     ability_query: str = "SELECT * FROM POKEMONS WHERE abilities like ?"
     size_query: str = "SELECT * FROM POKEMONS WHERE {column} {operator} ?"
     size_query_both: str = (
         "SELECT * FROM POKEMONS WHERE height {operator_h} ? AND weight {operator_w} ?"
     )
+    species_query: str = "SELECT * FROM POKEMONS WHERE species like ?"
+    growth_rate_query: str = "SELECT * FROM POKEMONS WHERE growth_rate like ?"
+    catch_rate_query: str = "SELECT * FROM POKEMONS WHERE catch_rate {operator} ?"
+    base_friendship_query: str = (
+        "SELECT * FROM POKEMONS WHERE base_friendship {operator} ?"
+    )
+    base_experience_query: str = "SELECT * FROM POKEMONS WHERE base_exp {operator} ?"
 
 
 class ResponseModel(BaseModel):

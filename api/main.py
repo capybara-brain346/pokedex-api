@@ -37,8 +37,8 @@ def get_pokemons_by_type(
     pokemon_type: str, db: sqlite3.Connection = Depends(get_db)
 ) -> dict[int, ResponseModel]:
     cursor = db.cursor()
-    type_binding = f"%{pokemon_type}%"
-    cursor.execute(q.type_query, [type_binding])
+    binding = f"%{pokemon_type}%"
+    cursor.execute(q.type_query, [binding])
     response = cursor.fetchall()
     response_model = format_response(response=response)
 
@@ -91,3 +91,68 @@ def get_pokemons_by_size(
         return response_model
 
     return {-1: response_model}
+
+
+@app.get("/pokemons/species/{pokemon_species}")
+def get_pokemons_by_species(
+    pokemon_species: str, db: sqlite3.Connection = Depends(get_db)
+) -> dict[int, ResponseModel]:
+    cursor = db.cursor()
+    binding = f"%{pokemon_species}%"
+    cursor.execute(q.species_query, [binding])
+    response = cursor.fetchall()
+    response_model = format_response(response=response)
+
+    return response_model if response_model else {-1: response_model}
+
+
+@app.get("/pokemons/growth_rate/{pokemon_growth_rate}")
+def get_pokemons_by_growth_rate(
+    pokemon_growth_rate: str, db: sqlite3.Connection = Depends(get_db)
+) -> dict[int, ResponseModel]:
+    cursor = db.cursor()
+    binding = f"%{pokemon_growth_rate}%"
+    cursor.execute(q.growth_rate_query, [binding])
+    response = cursor.fetchall()
+    response_model = format_response(response=response)
+
+    return response_model if response_model else {-1: response_model}
+
+
+@app.get("/pokemons/catch_rate")
+def get_pokemons_by_catch_rate(
+    pokemon_catch_rate: str, db: sqlite3.Connection = Depends(get_db)
+) -> dict[int, ResponseModel]:
+    cursor = db.cursor()
+    operator, value = separate_operator_and_number(pokemon_catch_rate)
+    cursor.execute(q.catch_rate_query.format(operator=operator), [value])
+    response = cursor.fetchall()
+    response_model = format_response(response=response)
+
+    return response_model if response_model else {-1: response_model}
+
+
+@app.get("/pokemons/base_friendship")
+def get_pokemons_by_base_friendship(
+    pokemon_base_friendship: str, db: sqlite3.Connection = Depends(get_db)
+) -> dict[int, ResponseModel]:
+    cursor = db.cursor()
+    operator, value = separate_operator_and_number(pokemon_base_friendship)
+    cursor.execute(q.base_friendship_query.format(operator=operator), [value])
+    response = cursor.fetchall()
+    response_model = format_response(response=response)
+
+    return response_model if response_model else {-1: response_model}
+
+
+@app.get("/pokemons/base_experience")
+def get_pokemons_by_base_experience(
+    pokemon_base_experience: str, db: sqlite3.Connection = Depends(get_db)
+) -> dict[int, ResponseModel]:
+    cursor = db.cursor()
+    operator, value = separate_operator_and_number(pokemon_base_experience)
+    cursor.execute(q.base_experience_query.format(operator=operator), [value])
+    response = cursor.fetchall()
+    response_model = format_response(response=response)
+
+    return response_model if response_model else {-1: response_model}
