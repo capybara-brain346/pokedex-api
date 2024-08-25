@@ -1,7 +1,12 @@
 import sqlite3
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, status, Response
 from api.models import Query, ResponseModel
-from api.utils import get_db, format_response, separate_operator_and_number
+from api.utils import (
+    get_db,
+    format_response,
+    separate_operator_and_number,
+    clean_request,
+)
 
 app = FastAPI(debug=True)
 q = Query()
@@ -9,27 +14,40 @@ q = Query()
 
 @app.get("/pokemons/name/{name}")
 def get_pokemons_by_name(
-    name: str, db: sqlite3.Connection = Depends(get_db)
+    name: str,
+    response: Response,
+    db: sqlite3.Connection = Depends(get_db),
 ) -> dict[int, ResponseModel]:
+    name = clean_request(name)
     cursor = db.cursor()
     cursor.execute(q.name_query, (name,))
-    response = cursor.fetchall()
-    response_model = format_response(response=response)
-
-    return response_model if response_model else {-1: response_model}
+    data = cursor.fetchall()
+    data_model = format_response(data=data)
+    if data_model:
+        response.status_code = status.HTTP_200_OK
+        return data_model
+    else:
+        response.status_code = status.HTTP_404_NOT_FOUND
+        return {-1: data_model}
 
 
 @app.get("/pokemons/abilities/{abilities}")
 def get_pokemons_by_abilities(
-    abilities: str, db: sqlite3.Connection = Depends(get_db)
+    abilities: str, response: Response, db: sqlite3.Connection = Depends(get_db)
 ) -> dict[int, ResponseModel]:
+    abilities = clean_request(abilities)
     cursor = db.cursor()
     abilities_binding = f"%{abilities}%"
     cursor.execute(q.ability_query, [abilities_binding])
-    response = cursor.fetchall()
-    response_model = format_response(response=response)
+    data = cursor.fetchall()
+    data_model = format_response(data=data)
 
-    return response_model if response_model else {-1: response_model}
+    if data_model:
+        response.status_code = status.HTTP_200_OK
+        return data_model
+    else:
+        response.status_code = status.HTTP_404_NOT_FOUND
+        return {-1: data_model}
 
 
 @app.get("/pokemons/type/{pokemon_type}")

@@ -12,7 +12,7 @@ def get_db():
         db.close()
 
 
-def format_response(response: List[any]) -> dict[int, ResponseModel]:
+def format_response(data: List[any]) -> dict[int, ResponseModel]:
     return {
         row_id: ResponseModel(
             name=row[0],
@@ -33,7 +33,7 @@ def format_response(response: List[any]) -> dict[int, ResponseModel]:
             sp_defense=row[15],
             speed=row[16],
         )
-        for row_id, row in enumerate(response)
+        for row_id, row in enumerate(data)
     }
 
 
@@ -49,3 +49,7 @@ def separate_operator_and_number(
         return (operator, float(number))
     else:
         raise ValueError("Invalid size_request format. Ensure the format is correct.")
+
+
+def clean_request(request_obj: str) -> str:
+    return request_obj.strip().title()
