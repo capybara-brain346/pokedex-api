@@ -65,13 +65,14 @@ def get_pokemons_by_type(
 
 @app.get("/pokemons/size")
 def get_pokemons_by_size(
+    response: Response,
     height: str | None = None,
     weight: str | None = None,
     db: sqlite3.Connection = Depends(get_db),
 ) -> dict[int, ResponseModel]:
     cursor = db.cursor()
 
-    response_model = ResponseModel()
+    data_model = ResponseModel()
     if height and weight:
         operator_h, value_h = separate_operator_and_number(height)
         operator_w, value_w = separate_operator_and_number(weight)
@@ -80,9 +81,9 @@ def get_pokemons_by_size(
             q.size_query_both.format(operator_h=operator_h, operator_w=operator_w),
             [value_h, value_w],
         )
-        response = cursor.fetchall()
-        response_model = format_response(response=response)
-        return response_model
+        data = cursor.fetchall()
+        data_model = format_response(data=data)
+        return data_model
     elif height:
         operator, value = separate_operator_and_number(height)
 
@@ -90,9 +91,9 @@ def get_pokemons_by_size(
             q.size_query.format(column="height", operator=operator),
             [value],
         )
-        response = cursor.fetchall()
-        response_model = format_response(response=response)
-        return response_model
+        data = cursor.fetchall()
+        data_model = format_response(data=data)
+        return data_model
     elif weight:
         operator, value = separate_operator_and_number(weight)
         print(operator, value)
@@ -104,11 +105,12 @@ def get_pokemons_by_size(
             q.size_query.format(column="weight", operator=operator),
             [value],
         )
-        response = cursor.fetchall()
-        response_model = format_response(response=response)
-        return response_model
+        data = cursor.fetchall()
+        data_model = format_response(data=data)
+        return data_model
 
-    return {-1: response_model}
+    response.status_code = status.HTTP_404_NOT_FOUND
+    return {-1: data_model}
 
 
 @app.get("/pokemons/species/{pokemon_species}")
