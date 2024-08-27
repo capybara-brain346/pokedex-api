@@ -12,7 +12,7 @@ def get_test_db():
     yield db
     db.close()
 
-
+# TODO: Populate test db with more values
 def create_tables(db):
     cursor = db.cursor()
     cursor.execute("""CREATE TABLE pokemons (
