@@ -96,11 +96,6 @@ def get_pokemons_by_size(
         return data_model
     elif weight:
         operator, value = separate_operator_and_number(weight)
-        print(operator, value)
-        print(
-            q.size_query.format(column="weight", operator=operator),
-            [value],
-        )
         cursor.execute(
             q.size_query.format(column="weight", operator=operator),
             [value],
