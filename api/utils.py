@@ -5,7 +5,7 @@ import re
 
 
 def get_db():
-    db = sqlite3.connect("pokemon.db")
+    db = sqlite3.connect(r"C:\Users\piyus\Code\Stuff\pokedex-api\pokemon.db")
     try:
         yield db
     finally:
