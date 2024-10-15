@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE type like ?

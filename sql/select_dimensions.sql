@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE height {operator_h} ? AND weight {operator_w} ?

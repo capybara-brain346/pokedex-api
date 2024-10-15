@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE catch_rate {operator} ?

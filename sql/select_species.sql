@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE species like ?

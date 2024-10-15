@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE growth_rate like ?

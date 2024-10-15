@@ -1,0 +1,1 @@
+SELECT * FROM POKEMONS WHERE base_exp {operator} ?
