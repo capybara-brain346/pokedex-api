@@ -58,7 +58,7 @@ def get_pokemons_by_type(
     binding = f"%{pokemon_type}%"
     cursor.execute(q.type_query, [binding])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
@@ -116,7 +116,7 @@ def get_pokemons_by_species(
     binding = f"%{pokemon_species}%"
     cursor.execute(q.species_query, [binding])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
@@ -129,7 +129,7 @@ def get_pokemons_by_growth_rate(
     binding = f"%{pokemon_growth_rate}%"
     cursor.execute(q.growth_rate_query, [binding])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
@@ -142,7 +142,7 @@ def get_pokemons_by_catch_rate(
     operator, value = separate_operator_and_number(pokemon_catch_rate)
     cursor.execute(q.catch_rate_query.format(operator=operator), [value])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
@@ -155,7 +155,7 @@ def get_pokemons_by_base_friendship(
     operator, value = separate_operator_and_number(pokemon_base_friendship)
     cursor.execute(q.base_friendship_query.format(operator=operator), [value])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
@@ -168,6 +168,6 @@ def get_pokemons_by_base_experience(
     operator, value = separate_operator_and_number(pokemon_base_experience)
     cursor.execute(q.base_experience_query.format(operator=operator), [value])
     response = cursor.fetchall()
-    response_model = format_response(response=response)
+    response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
