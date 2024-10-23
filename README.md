@@ -38,7 +38,7 @@ The dataset contains information about:
 - Base Friendship
 - Base Experience
 
-The dataset is publicly available on [Kaggle](https://www.kaggle.com/datasets/crinklybrain2003/pokmon-base-stats-dataset).
+The dataset has been uploaded on [Kaggle](https://www.kaggle.com/datasets/crinklybrain2003/pokmon-base-stats-dataset).
 
 ## Installation
 
