@@ -1,11 +1,18 @@
 import sqlite3
+import psycopg2
 from api.models import ResponseModel
 from typing import List, Tuple, Dict
 import re
 
 
 def get_db():
-    db = sqlite3.connect(r"C:\Users\piyus\Code\Stuff\pokedex-api\pokemon.db")
+    db = psycopg2.connect(
+        database="datacamp_courses",
+        user="datacamp",
+        host="localhost",
+        password="postgresql_tutorial",
+        port=5432,
+    )
     try:
         yield db
     finally:
