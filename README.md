@@ -1,13 +1,17 @@
 <img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
 
+Here’s the updated `README` for your Pokedex-API project with the Dockerfile changes included:
+
+---
+
 # Pokedex-API
 
-This project is a RESTful API developed with FastAPI that provides detailed data on over 1,000 Pokémon. It allows users to query various Pokémon attributes such as name, species, abilities, type, and combat stats. The API integrates an SQLite database to store and manage Pokémon data scraped from external sources.
+This project is a RESTful API developed with FastAPI that provides detailed data on over 1,000 Pokémon. It allows users to query various Pokémon attributes such as name, species, abilities, type, and combat stats. The API integrates a PostgreSQL database to store and manage Pokémon data scraped from external sources.
 
 ## Features
 - **Comprehensive Pokémon Data:**
   - Data scraped from [pokemondb.net](https://pokemondb.net) for 1,015 Pokémon.
-  - Data stored in CSV files and imported into an SQLite database for persistence.
+  - Data stored in CSV files and imported into a PostgreSQL database for persistence.
   - Uploaded to Kaggle as an open-source dataset, receiving over 1,100 downloads and 5,000 views.
 
 - **API Endpoints:**
@@ -20,7 +24,7 @@ This project is a RESTful API developed with FastAPI that provides detailed data
 
 - **Python:** Core programming language for developing the API and scraping Pokémon data.
 - **FastAPI:** Framework used to build the RESTful API server.
-- **SQLite:** Embedded database for storing Pokémon data.
+- **PostgreSQL:** Relational database for storing Pokémon data.
 - **Scrapy:** For scraping Pokémon data from external sources.
 - **GitHub Actions:** Automates linting and container builds.
 
@@ -68,6 +72,23 @@ The dataset has been uploaded on [Kaggle](https://www.kaggle.com/datasets/crinkl
    - Once the server is running, navigate to `http://127.0.0.1:8000` to access the API.
    - Use the interactive API documentation provided by FastAPI at `http://127.0.0.1:8000/docs`.
 
+## Docker
+
+To run the API using Docker:
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -t pokedex-api .
+   ```
+
+2. **Run the Docker container:**
+   ```bash
+   docker run -p 8080:8080 pokedex-api
+   ```
+
+3. **Access the API:**
+   - Once the container is running, navigate to `http://127.0.0.1:8080` to access the API.
+
 ## API Endpoints
 
 ### Pokémon Attributes
@@ -111,6 +132,6 @@ The project utilizes GitHub Actions for automating:
 - Implement caching for frequently queried data to improve response time.
 - Add support for more detailed Pokémon statistics and movesets.
 
-## Contributing
+--- 
 
-Contributions are welcome! If you have any suggestions, improvements, or find issues, feel free to open a pull request or submit an issue.
+This updated README reflects the Docker setup and PostgreSQL integration for your Pokedex-API.
