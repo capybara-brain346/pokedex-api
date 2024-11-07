@@ -1,6 +1,6 @@
 import sqlite3
 from api.models import ResponseModel
-from typing import List
+from typing import List, Tuple, Dict
 import re
 
 
@@ -12,7 +12,7 @@ def get_db():
         db.close()
 
 
-def format_response(data: List[any]) -> dict[int, ResponseModel]:
+def format_response(data: List[any]) -> Dict[int, ResponseModel]:
     return {
         row_id: ResponseModel(
             name=row[0],
@@ -39,13 +39,14 @@ def format_response(data: List[any]) -> dict[int, ResponseModel]:
 
 def separate_operator_and_number(
     size_request: str,
-) -> tuple[str, float] | None:
+) -> Tuple[str, float] | None:
     pattern: str = r"(>=|<=|>|<|=)(\d*\.?\d+)"
 
     match = re.match(pattern, size_request)
 
     if match:
         operator, number = match.groups()
+        assert operator in ["=", "<", ">", "<=", ">="]
         return (operator, float(number))
     else:
         raise ValueError("Invalid size_request format. Ensure the format is correct.")
