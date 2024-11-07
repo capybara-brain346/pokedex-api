@@ -3,16 +3,11 @@ import psycopg2
 from api.models import ResponseModel
 from typing import List, Tuple, Dict
 import re
+import os
 
 
 def get_db():
-    db = psycopg2.connect(
-        database="datacamp_courses",
-        user="datacamp",
-        host="localhost",
-        password="postgresql_tutorial",
-        port=5432,
-    )
+    db = psycopg2.connect(os.getenv("POSTGRES_CONNECTION_STRING"))
     try:
         yield db
     finally:
