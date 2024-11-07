@@ -12,6 +12,7 @@ def get_test_db():
     yield db
     db.close()
 
+
 # TODO: Populate test db with more values
 def create_tables(db):
     cursor = db.cursor()
@@ -119,19 +120,19 @@ def test_size_no_parameters(client: TestClient = client):
             "name": "NULL",
             "type": "NULL",
             "species": "NULL",
-            "height": "NULL",
-            "weight": "NULL",
+            "height": -1.0,
+            "weight": -1.0,
             "abilities": "NULL",
-            "catch_rate": "NULL",
-            "base_friendship": "NULL",
-            "base_exp": "NULL",
+            "catch_rate": -1,
+            "base_friendship": -1,
+            "base_exp": -1,
             "growth_rate": "NULL",
             "gender": "NULL",
-            "hp": "NULL",
-            "attack": "NULL",
-            "defense": "NULL",
-            "sp_attack": "NULL",
-            "sp_defense": "NULL",
-            "speed": "NULL",
+            "hp": -1,
+            "attack": -1,
+            "defense": -1,
+            "sp_attack": -1,
+            "sp_defense": -1,
+            "speed": -1,
         }
     }

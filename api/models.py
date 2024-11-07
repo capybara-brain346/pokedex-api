@@ -21,55 +21,22 @@ class Query(BaseModel):
 class ResponseModel(BaseModel):
     """
     Represents the data structure for a Pokémon response model.
-
-    Attributes:
-        name (str): The name of the Pokémon.
-                    Default is "NULL".
-        type (str): The type of the Pokémon.
-                    Default is "NULL".
-        species (str): The species of the Pokémon. Default is "NULL".
-        height (float | str): The height of the Pokémon,
-        which can be a float or "NULL" as a string. Default is "NULL".
-        weight (float | str): The weight of the Pokémon,
-        which can be a float or "NULL" as a string. Default is "NULL".
-        abilities (str): The abilities of the Pokémon. Default is "NULL".
-        catch_rate (int | str): The catch rate of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        base_friendship (int | str): The base friendship of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        base_exp (int | str): The base experience points of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        growth_rate (str): The growth rate of the Pokémon. Default is "NULL".
-        gender (str): The gender of the Pokémon. Default is "NULL".
-        hp (int | str): The HP stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        attack (int | str): The attack stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        defense (int | str): The defense stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        sp_attack (int | str): The special attack stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        sp_defense (int | str): The special defense stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
-        speed (int | str): The speed stat of the Pokémon,
-        which can be an integer or "NULL" as a string. Default is "NULL".
     """
 
-    # TODO improve validation
     name: str = "NULL"
     type: str = "NULL"
     species: str = "NULL"
-    height: float | str = "NULL"
-    weight: float | str = "NULL"
+    height: float = -1.0
+    weight: float = -1.0
     abilities: str = "NULL"
-    catch_rate: int | str = "NULL"
-    base_friendship: int | str = "NULL"
-    base_exp: int | str = "NULL"
-    growth_rate: str | str = "NULL"
+    catch_rate: int = -1
+    base_friendship: int = -1
+    base_exp: int = -1
+    growth_rate: str = "NULL"
     gender: str = "NULL"
-    hp: int | str = "NULL"
-    attack: int | str = "NULL"
-    defense: int | str = "NULL"
-    sp_attack: int | str = "NULL"
-    sp_defense: int | str = "NULL"
-    speed: int | str = "NULL"
+    hp: int = -1
+    attack: int = -1
+    defense: int = -1
+    sp_attack: int = -1
+    sp_defense: int = -1
+    speed: int = -1
