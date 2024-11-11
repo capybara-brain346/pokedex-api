@@ -11,7 +11,7 @@ from api.utils import (
 app = FastAPI(debug=True)
 q = Query()
 
-
+# get by name
 @app.get("/pokemons/name/{name}")
 def get_pokemons_by_name(
     name: str,
@@ -30,7 +30,7 @@ def get_pokemons_by_name(
         response.status_code = status.HTTP_404_NOT_FOUND
         return {-1: data_model}
 
-
+# get by abilities
 @app.get("/pokemons/abilities/{abilities}")
 def get_pokemons_by_abilities(
     abilities: str, response: Response, db: sqlite3.Connection = Depends(get_db)
@@ -49,7 +49,7 @@ def get_pokemons_by_abilities(
         response.status_code = status.HTTP_404_NOT_FOUND
         return {-1: data_model}
 
-
+#get by type
 @app.get("/pokemons/type/{pokemon_type}")
 def get_pokemons_by_type(
     pokemon_type: str, db: sqlite3.Connection = Depends(get_db)
@@ -62,29 +62,30 @@ def get_pokemons_by_type(
 
     return response_model if response_model else {-1: response_model}
 
-
+# get by size
 @app.get("/pokemons/size")
 def get_pokemons_by_size(
     response: Response,
-    height: str | None = None,
-    weight: str | None = None,
+    height: str = "",
+    weight: str = "",
     db: sqlite3.Connection = Depends(get_db),
 ) -> dict[int, ResponseModel]:
     cursor = db.cursor()
 
     data_model = ResponseModel()
-    if height and weight:
+    if height and weight: # if query param contain both height and weight
         operator_h, value_h = separate_operator_and_number(height)
         operator_w, value_w = separate_operator_and_number(weight)
 
-        cursor.execute(
+        cursor.execute( # build sql query (will change in future)
             q.size_query_both.format(operator_h=operator_h, operator_w=operator_w),
             [value_h, value_w],
         )
         data = cursor.fetchall()
         data_model = format_response(data=data)
         return data_model
-    elif height:
+
+    elif height: #if query param contains only height
         operator, value = separate_operator_and_number(height)
 
         cursor.execute(
@@ -94,7 +95,8 @@ def get_pokemons_by_size(
         data = cursor.fetchall()
         data_model = format_response(data=data)
         return data_model
-    elif weight:
+
+    elif weight: # if query param only contains weight
         operator, value = separate_operator_and_number(weight)
         cursor.execute(
             q.size_query.format(column="weight", operator=operator),
@@ -107,20 +109,20 @@ def get_pokemons_by_size(
     response.status_code = status.HTTP_404_NOT_FOUND
     return {-1: data_model}
 
-
+# get by species
 @app.get("/pokemons/species/{pokemon_species}")
 def get_pokemons_by_species(
     pokemon_species: str, db: sqlite3.Connection = Depends(get_db)
 ) -> dict[int, ResponseModel]:
     cursor = db.cursor()
-    binding = f"%{pokemon_species}%"
+    binding = f"%{pokemon_species}%" # to format string to be used in a sql LIKE clause eg. WHERE species LIKE %{}%
     cursor.execute(q.species_query, [binding])
     response = cursor.fetchall()
     response_model = format_response(data=response)
 
     return response_model if response_model else {-1: response_model}
 
-
+# get by growth rate
 @app.get("/pokemons/growth_rate/{pokemon_growth_rate}")
 def get_pokemons_by_growth_rate(
     pokemon_growth_rate: str, db: sqlite3.Connection = Depends(get_db)
@@ -133,7 +135,7 @@ def get_pokemons_by_growth_rate(
 
     return response_model if response_model else {-1: response_model}
 
-
+# get by catch rate
 @app.get("/pokemons/catch_rate")
 def get_pokemons_by_catch_rate(
     pokemon_catch_rate: str, db: sqlite3.Connection = Depends(get_db)
@@ -146,7 +148,7 @@ def get_pokemons_by_catch_rate(
 
     return response_model if response_model else {-1: response_model}
 
-
+# get by base friendship
 @app.get("/pokemons/base_friendship")
 def get_pokemons_by_base_friendship(
     pokemon_base_friendship: str, db: sqlite3.Connection = Depends(get_db)
@@ -159,7 +161,7 @@ def get_pokemons_by_base_friendship(
 
     return response_model if response_model else {-1: response_model}
 
-
+# get by base experience
 @app.get("/pokemons/base_experience")
 def get_pokemons_by_base_experience(
     pokemon_base_experience: str, db: sqlite3.Connection = Depends(get_db)
