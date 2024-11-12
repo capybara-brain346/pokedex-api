@@ -1,6 +1,6 @@
 <img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
 
-Here’s the updated `README` for your Pokedex-API project with the Dockerfile changes included:
+
 
 ---
 
@@ -134,4 +134,3 @@ The project utilizes GitHub Actions for automating:
 
 --- 
 
-This updated README reflects the Docker setup and PostgreSQL integration for your Pokedex-API.
