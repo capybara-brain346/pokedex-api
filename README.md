@@ -6,6 +6,8 @@
 
 # Pokedex-API
 
+## Demo Video 📽️: https://www.youtube.com/watch?v=DXXRnLPZq_8
+
 This project is a RESTful API developed with FastAPI that provides detailed data on over 1,000 Pokémon. It allows users to query various Pokémon attributes such as name, species, abilities, type, and combat stats. The API integrates a PostgreSQL database to store and manage Pokémon data scraped from external sources.
 
 ## Features
