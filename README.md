@@ -10,6 +10,8 @@
 
 This project is a RESTful API developed with FastAPI that provides detailed data on over 1,000 Pokémon. It allows users to query various Pokémon attributes such as name, species, abilities, type, and combat stats. The API integrates a PostgreSQL database to store and manage Pokémon data scraped from external sources.
 
+![image](https://github.com/user-attachments/assets/ec1a38f1-f95d-4176-b073-6d43f59f937c)
+
 ## Features
 - **Comprehensive Pokémon Data:**
   - Data scraped from [pokemondb.net](https://pokemondb.net) for 1,015 Pokémon.
