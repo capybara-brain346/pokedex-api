@@ -1,9 +1,3 @@
-<img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
-
-
-
----
-
 # Pokedex-API
 
 ## Demo Video 📽️: https://www.youtube.com/watch?v=DXXRnLPZq_8
@@ -137,4 +131,6 @@ The project utilizes GitHub Actions for automating:
 - Add support for more detailed Pokémon statistics and movesets.
 
 --- 
+<img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
+
 
