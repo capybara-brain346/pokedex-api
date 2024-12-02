@@ -1,12 +1,10 @@
-<img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
-
-Here’s the updated `README` for your Pokedex-API project with the Dockerfile changes included:
-
----
-
 # Pokedex-API
 
+## Demo Video 📽️: https://www.youtube.com/watch?v=DXXRnLPZq_8
+
 This project is a RESTful API developed with FastAPI that provides detailed data on over 1,000 Pokémon. It allows users to query various Pokémon attributes such as name, species, abilities, type, and combat stats. The API integrates a PostgreSQL database to store and manage Pokémon data scraped from external sources.
+
+![image](https://github.com/user-attachments/assets/ec1a38f1-f95d-4176-b073-6d43f59f937c)
 
 ## Features
 - **Comprehensive Pokémon Data:**
@@ -133,5 +131,6 @@ The project utilizes GitHub Actions for automating:
 - Add support for more detailed Pokémon statistics and movesets.
 
 --- 
+<img src="https://github.com/user-attachments/assets/de7f2289-5809-4126-8432-5fcd1e625c5a" alt="Features Screenshot" width="full">
 
-This updated README reflects the Docker setup and PostgreSQL integration for your Pokedex-API.
+

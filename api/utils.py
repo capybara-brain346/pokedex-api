@@ -13,7 +13,7 @@ def get_db():
     finally:
         db.close()
 
-
+# format results from database to match the schema of response model
 def format_response(data: List[any]) -> Dict[int, ResponseModel]:
     return {
         row_id: ResponseModel(
@@ -38,7 +38,7 @@ def format_response(data: List[any]) -> Dict[int, ResponseModel]:
         for row_id, row in enumerate(data)
     }
 
-
+# sepearate operator and number input for height and weight endpoint
 def separate_operator_and_number(
     size_request: str,
 ) -> Tuple[str, float] | None:

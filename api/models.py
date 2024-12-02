@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 
-
+#TODO convert all queries to parameterized
+# all postgresql queries 
 class Query(BaseModel):
     name_query: str = "SELECT * FROM pokemons WHERE name=%s"
     type_query: str = "SELECT * FROM pokemons WHERE type ILIKE %s"
@@ -17,7 +18,7 @@ class Query(BaseModel):
     )
     base_experience_query: str = "SELECT * FROM pokemons WHERE base_exp {operator} %s"
 
-
+# schema of the response from the api
 class ResponseModel(BaseModel):
     """
     Represents the data structure for a Pokémon response model.
